@@ -1,0 +1,17 @@
+// À mettre dans ton HTML avant la fermutre du body : il s'agit des ressources à aller chercher, dans un dossier que tu devras créer "librairie". Il faut que tu DL JQUERY et que tu remplaces la version ci-dessous (X.X.X).
+
+ 
+<script type="text/javascript" src="librairie/jquery-X.X.X.js"></script>
+<script type="text/javascript" src="librairie/mesfonctions.js"></script>
+
+
+
+// Et ça, ça sera le script que tu mettras dans un fichier mesfonctions.js :
+
+$(document).ready(function() {
+  var scroll = function(id){
+    $(id).on("click",function(){
+    $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top }, 700 );
+  });
+}
+scrollFunction(".TACLASSE");
